@@ -38,8 +38,13 @@ export default class CBGCaculator extends Vue {
     return z.toFixed(2);
   }
   get rate() {
-    let z = ((this.rmb * 0.95) / (this.yuanbao / 10) - 1) * 100;
-    return (z * (this.fromCBG ? -1 : 1)).toFixed(2);
+    let z;
+    if(this.fromCBG){
+      z = ((this.yuanbao / 10)/this.rmb  - 1) * 100;
+    }else{
+      z = ((this.rmb * 0.95) / (this.yuanbao / 10) - 1) * 100;
+    }
+    return z.toFixed(2);
   }
 
   mounted() {

@@ -7,7 +7,7 @@ import CBGCaculator from './views/CBGCaculator.vue';
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  base: '/AlongFireWarmKit/',
   routes: [
     {
       path: '/',
