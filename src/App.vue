@@ -1,7 +1,9 @@
 <template>
 <div id="app">
-  <h1><router-link to="/" class="title">Title</router-link></h1>
-  <router-view/>
+  <h1><router-link to="/" class="title">顺火暖工具箱</router-link></h1>
+  <div class="content">
+    <router-view />
+  </div>
   <div id="footer">
     <router-link to="/about">About</router-link>
   </div>
@@ -15,6 +17,9 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .title {
   padding: 10px;
@@ -22,12 +27,16 @@
   color: inherit;
   text-decoration: inherit;
 }
+.content {
+  display: flex;
+  margin-left: 200px;
+  margin-right: 200px;
+  flex: 1 1 auto;
+}
 #footer {
   padding: 30px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  flex: 0 0 auto;
+  justify-content: flex-end;
   a {
     font-weight: bold;
     color: #2c3e50;
