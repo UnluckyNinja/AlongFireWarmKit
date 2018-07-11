@@ -20,7 +20,7 @@ export default new Router({
       component: About,
     },
     {
-      path: 'cbg',
+      path: '/cbg',
       name: 'cbg',
       component: CBGCaculator,
     },
